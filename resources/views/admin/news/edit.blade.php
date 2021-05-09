@@ -83,7 +83,7 @@
                                                         <div class="form-group">
                                                             <label for="name">{{__('admin.slug')}}</label>
                                                             <input type="text" id="slug" name="slug" class="form-control"
-                                                                   value="{{$new->slug}}">
+                                                                   value="{{$new->slug}}" >
                                                             @error('slug')
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror

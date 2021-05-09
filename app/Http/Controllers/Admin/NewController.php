@@ -138,9 +138,10 @@ class NewController extends Controller
         $this->newRepository->update($request->all(),$id);
 
         //handle photos
+        $imagePath = "";
         if ($request->hasFile('image')) {
-            $image = $this->handleImage($request,'news');
-            $new->image = $image;
+            $imagePath = $this->handleImage($request,'news');
+            $new->image = $imagePath;
             $this->newRepository->updateImage($new);
         }
 
@@ -191,6 +192,9 @@ class NewController extends Controller
      */
     public function handleImage($request,$folder)
     {
+        /*$file=$request->image;
+        $filename=$file->getClientOriginalName();
+        $file->storeAs(''.$folder.'',$filename);*/
         $imageName = time().rand(1,100).'.'.$request->image->extension();
         $request->image->move(public_path('Admin/assets/images/'.$folder), $imageName);
         return $imageName;

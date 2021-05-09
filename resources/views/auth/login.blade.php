@@ -150,13 +150,13 @@
                                         </form>
                                     </div>
                                     <div class="card-body pb-0">
-                                        <p class="text-center">
+                                        {{--<p class="text-center">
                                             @if (Route::has('password.request'))
                                                 <a href="{{ route('password.request') }}" class="card-link">
                                                     {{ __('admin.forgotPassword') }}
                                                 </a>
                                             @endif
-                                        </p>
+                                        </p>--}}
                                         {{--<p class="text-center">New to Modern Admin? <a href="register-with-navbar.html" class="card-link">Create Account</a></p>--}}
                                     </div>
                                 </div>

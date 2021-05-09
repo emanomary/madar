@@ -73,10 +73,12 @@
                                                     aria-expanded="false">
                                                 {{$category->name}}
                                             </a>
-                                            <ul class="dropdown-menu float-right text-right" aria-labelledby="dropdownMenu2">
+                                            <ul class="dropdown-menu float-right text-right"
+                                                aria-labelledby="dropdownMenu2"
+                                                style="background-image: linear-gradient(45deg,#36BCBB 0%, #1191D0 100% );border-radius: 0px;border: 0px;margin-top: 18px;">
                                                 @foreach($category->child as $child)
-                                                    <li class="dropdown-item">
-                                                        <a href="{{route('site.categoryNews',$child->id)}}" style="display: block">{{$child->name}}</a>
+                                                    <li class="dropdown-item" style="font-family: 'DUBAI-MEDIUM';">
+                                                        <a href="{{route('site.categoryNews',$child->id)}}" style="display: block;">{{$child->name}}</a>
                                                     </li>
                                                 @endforeach
                                             </ul>

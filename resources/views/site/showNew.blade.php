@@ -7,10 +7,14 @@
                 <div class="col-md-6">
                     <h2>{{$showNew->title}}</h2>
                 </div>
-                <div class="col-md-6">
-                    <a href="{{route('site.index')}}" class="headerLinks float-left"> <span class="homeLink">
+                <div class="col-md-6 headerLinks float-left text-left">
+                    <a href="{{route('site.index')}}" >
+                        <span class="homeLink">
                             {{__('admin.homePage')}}
-                        </span> <span>-</span>
+                        </span>
+                    </a>
+                    <span>-</span>
+                    <a href="{{route('site.categoryNews',$showNew->category->slug)}}">
                         <span class="homeLink">{{$showNew->category->name}}</span>{{--<span>-</span>--}}
                         {{--<span> هذا النص هو ...</span>--}}
                     </a>
@@ -23,7 +27,7 @@
             <div class="row newsSection">
                 <div class="col-md-12">
                     <div class="heroNewsImg">
-                        <img src="{{asset('Admin/assets/images/news/'.$showNew->image)}}" alt="">
+                        <img src="{{asset('Admin/assets/images/news',$showNew->image)}}" alt="">
                         <div class="topNews">
                             <div class="tag">
                                 <span class="circle"><i class="lni lni-tag"></i>

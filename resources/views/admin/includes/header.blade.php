@@ -47,7 +47,7 @@
                                 $avatar = User::select('avatar')->get();
                                 ?>
                                 @if($avatar->isEmpty())
-                                    <img src="{{asset('Admin/assets/images/users/person.png')}}" alt="avatar">
+                                    <img src="{{url('Admin/assets/images/users/person.png')}}" alt="avatar">
                                 @else
                                     <img class="brand-logo" alt="modern admin logo"
                                          src="{{url('Admin/assets/images/users',$avatar[0]['avatar'])}}">

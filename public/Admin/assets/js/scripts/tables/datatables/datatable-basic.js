@@ -15,18 +15,7 @@ $(document).ready(function() {
 ****************************************/
 
 $('.zero-configuration').DataTable({
-    searching: true,
-    responsive: true,
-    paging: true,
-    info: false,
-    processing: false,
-    ordering: true,
-    //serverSide: true,
-    lengthMenu: [
-        [5, 10, 15, -1],
-        ['5', '10', '15', 'الكل']
-    ],
-    language: {
+    "language": {
         "search": "بحث : ",
         "lengthMenu": "مشاهدة _MENU_ السجلات",
         "zeroRecords": "نأسف! لا يوجد أي نتائج للبحث",

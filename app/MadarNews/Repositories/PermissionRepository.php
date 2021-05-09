@@ -2,9 +2,7 @@
 
 namespace App\MadarNews\Repositories;
 
-use App\MadarNews\Interfaces\CategoryInterface;
 use App\MadarNews\Interfaces\PermissionInterface;
-use App\Models\Category;
 use App\Models\Permission;
 
 class PermissionRepository implements PermissionInterface

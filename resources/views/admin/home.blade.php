@@ -28,7 +28,9 @@
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-header row">
-                <h4 class="card-title">{{ __('admin.dashboard') }}</h4>
+                <div class="col-md-12">
+                    <h4 class="card-title">{{ __('admin.dashboard') }}</h4>
+                </div>
             </div>
             <div class="content-body">
                 <div class="row">
