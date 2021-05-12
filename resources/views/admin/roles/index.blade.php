@@ -28,7 +28,7 @@
                 <!-- Zero configuration table -->
                 <section id="configuration">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-header">
                                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
@@ -45,7 +45,7 @@
                                     <div class="card-body card-dashboard">
                                         @include('admin.includes.alerts.success')
                                         @include('admin.includes.alerts.errors')
-                                        <table class="table table-striped table-bordered zero-configuration scrollable-container">
+                                        <table class="table table-striped table-bordered zero-configuration">
                                             <thead>
                                             <tr>
                                                 <th>#</th>

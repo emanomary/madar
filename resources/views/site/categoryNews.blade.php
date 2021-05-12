@@ -10,10 +10,12 @@
                             <div class="col-md-6">
                                 <h2>{{$categoryNew->category->name}}</h2>
                             </div>
-                            <div class="col-md-6">
-                                <a href="#" class="headerLinks float-left">
+                            <div class="col-md-6 headerLinks float-left text-left">
+                                <a href="{{route('site.index')}}">
                                     <span class="homeLink">{{__('admin.homePage')}}</span>
+                                </a>
                                     <span>-</span>
+                                <a href="#">
                                     <span>{{$categoryNew->category->name}}</span></a>
                             </div>
                         </div>
@@ -63,7 +65,7 @@
                                                                 </div>
                                                             </div>
                                                             <h4><a href="{{route('site.showNew',$categoryNew->slug)}}">{{$categoryNew->title}}</a></h4>
-                                                            <p>{!!$categoryNew->details!!}
+                                                            <p>{!! substr(strip_tags($categoryNew->details), 0, 600) !!}
                                                             </p>
                                                         </div>
                                                     </div>

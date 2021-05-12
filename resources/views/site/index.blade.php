@@ -35,7 +35,7 @@
                                                                 </div>
                                                             </div>
                                                             <h4><a href="{{route('site.showNew',$new->slug)}}">{{$new->title}}</a></h4>
-                                                            <p>{!! $new->details !!}</p>
+                                                            <p>{!! substr(strip_tags($new->details), 0, 600) !!}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,7 +56,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h6><a href="{{route('site.showNew',$new->slug)}}">{{$new->title}}</a></h6>
+                                                <h6><a href="{{route('site.showNew',$new->slug)}}">{{\Illuminate\Support\Str::limit($new->title,60)}}</a></h6>
                                                 <span class="date">
                                                     <i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i>
                                                     {{__('admin.lastUpdate')}}
@@ -112,7 +112,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h6><a href="{{route('site.showNew',$middle->slug)}}">{{$middle->title}}</a></h6>
+                                <h6><a href="{{route('site.showNew',$middle->slug)}}">{{\Illuminate\Support\Str::limit($middle->title,60)}}</a></h6>
                                 <span class="date">
                                     <i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i>
                                     {{__('admin.lastUpdate')}}
@@ -197,62 +197,6 @@
                                 </div>
                             @endforeach
                     @endif
-                    {{--<div class="articlesItem clearfix">
-                        <div class="writerImgCont">
-                            <div class="articlesWriter">
-                                <img src="{{asset('MadarTemplate/assets/images/artice.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="articleInfo">
-                            <div class="type"><span><i><img src="{{asset('MadarTemplate/assets/images/tag.png')}}" alt=""></i> تحقيق</span> </div>
-                            <h5>اسم الكاتب الكامل </h5>
-                            <span class="date"><i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i> آخر تحديث
-                <span>18/3/2021</span></span>
-
-                        </div>
-                    </div>
-                    <div class="articlesItem clearfix">
-                        <div class="writerImgCont">
-                            <div class="articlesWriter">
-                                <img src="{{asset('MadarTemplate/assets/images/ee.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="articleInfo">
-                            <div class="type"><span><i><img src="{{asset('MadarTemplate/assets/images/tag.png')}}" alt=""></i> مقالة</span> </div>
-                            <h5>اسم الكاتب الكامل </h5>
-                            <span class="date"><i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i> آخر تحديث
-                <span>18/3/2021</span></span>
-
-                        </div>
-                    </div>
-                    <div class="articlesItem clearfix">
-                        <div class="writerImgCont">
-                            <div class="articlesWriter">
-                                <img src="{{asset('MadarTemplate/assets/images/Ellipse 10.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="articleInfo">
-                            <div class="type"><span><i><img src="{{asset('MadarTemplate/assets/images/tag.png')}}" alt=""></i> مقالة</span> </div>
-                            <h5>اسم الكاتب الكامل </h5>
-                            <span class="date"><i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i> آخر تحديث
-                <span>18/3/2021</span></span>
-
-                        </div>
-                    </div>
-                    <div class="articlesItem clearfix">
-                        <div class="writerImgCont">
-                            <div class="articlesWriter">
-                                <img src="{{asset('MadarTemplate/assets/images/ee.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="articleInfo">
-                            <div class="type"><span><i><img src="{{asset('MadarTemplate/assets/images/tag.png')}}" alt=""></i> مقالة</span> </div>
-                            <h5>اسم الكاتب الكامل </h5>
-                            <span class="date"><i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i> آخر تحديث
-                <span>18/3/2021</span></span>
-
-                        </div>
-                    </div>--}}
                 </div>
             </div>
         </div>
@@ -293,7 +237,7 @@
                                                     </span>{{$tech->category->name}}</div>
                                             </div>
                                         </div>
-                                        <h6><a href="{{route('site.showNew',$tech->slug)}}">{{$tech->title}}</a></h6>
+                                        <h6><a href="{{route('site.showNew',$tech->slug)}}">{{\Illuminate\Support\Str::limit($tech->title,60)}}</a></h6>
                                         <span class="date">
                                             <i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i>
                                             {{__('admin.lastUpdate')}}
@@ -333,7 +277,7 @@
                                                     </span>{{$health->category->name}}</div>
                                             </div>
                                         </div>
-                                        <h6><a href="{{route('site.showNew',$health->slug)}}">{{$health->title}}</a></h6>
+                                        <h6><a href="{{route('site.showNew',$health->slug)}}">{{\Illuminate\Support\Str::limit($health->title,60)}}</a></h6>
                                         <span class="date">
                                             <i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i>
                                             {{__('admin.lastUpdate')}}
@@ -374,7 +318,7 @@
                                     <div class="rightInfographicImg">
                                         <img src="{{asset('Admin/assets/images/news/'.$infographic->image)}}" alt="">
                                     </div>
-                                    <h4><a href="{{route('site.showNew',$infographic->slug)}}">{{$infographic->title}}</a></h4>
+                                    <h4><a href="{{route('site.showNew',$infographic->slug)}}">{{\Illuminate\Support\Str::limit($infographic->title,60)}}</a></h4>
                                 </div>
                             </div>
                         @endif
@@ -386,7 +330,7 @@
                                 <div class="InfographicImgLeft">
                                     <img src="{{asset('Admin/assets/images/news/'.$infographic->image)}}" alt="">
                                 </div>
-                                <p><a href="{{route('site.showNew',$infographic->slug)}}">{{$infographic->title}}</a></p>
+                                <p><a href="{{route('site.showNew',$infographic->slug)}}">{{\Illuminate\Support\Str::limit($infographic->title,60)}}</a></p>
                             </div>
                         @endif
                     @endforeach
@@ -414,6 +358,13 @@
                                         <div class="col-md-6">
                                             <div class="heroNewsImg">
                                                 {{parse_str(parse_url($youtube->url,PHP_URL_QUERY ), $my_array_of_vars)}}
+                                                {{--<video controls poster="{{asset('MadarTemplate/assets/images/hero.png')}}" id="video-active">
+                                                    <source src="{{url('https://www.youtube.com/embed/'.$my_array_of_vars['v'])}}" type="video/mp4">
+                                                </video>
+                                                <div class="durationSec"> <i class="fas fa-play"></i>
+                                                    <div id="duration">28:35</div>
+                                                </div>
+--}}
                                                 <iframe height="300px"
                                                         src="{{url('https://www.youtube.com/embed/'.$my_array_of_vars['v'])}}"
                                                         title="YouTube video player"
@@ -421,6 +372,9 @@
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                         allowfullscreen>
                                                 </iframe>
+                                                <div class="durationSec"> <i class="fas fa-play"></i>
+                                                    <div id="duration">28:35</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -438,8 +392,8 @@
                                                         <span>{{$youtube->created_at->diffForHumans() }}</span>
                                                     </div>
                                                 </div>
-                                                <h4><a href="{{route('site.showNew',$youtube->id)}}">{{$youtube->title}}</a></h4>
-                                                <p>{!!$youtube->description!!}</p>
+                                                <h4><a href="#">{{\Illuminate\Support\Str::limit($youtube->title,60)}}</a></h4>
+                                                <p>{!!substr(strip_tags($youtube->description), 0, 600)!!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -466,7 +420,7 @@
                                                             allowfullscreen>
                                                     </iframe>
                                                 </div>
-                                                <h6>{{$youtube->title}}</h6>
+                                                <h6>{{\Illuminate\Support\Str::limit($youtube->title,60)}}</h6>
                                                 <span class="date">
                                                     <i><img src="{{asset('MadarTemplate/assets/images/clock2.png')}}" alt=""></i>
                                                     {{__('admin.lastUpdate')}}

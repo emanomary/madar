@@ -45,8 +45,8 @@
                     </li>
                     @if($categories->count() > 0)
                         @foreach($categories as $category)
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{route('site.categoryNews',$category->id)}}">{{$category->name}}</a>
+                            <li>
+                                <a href="{{route('site.categoryNews',$category->id)}}">{{$category->name}}</a>
                             </li>
                         @endforeach
                     @endif

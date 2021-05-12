@@ -236,7 +236,9 @@ class UserController extends Controller
     public function handleImage($request,$folder)
     {
         $iconName = time().rand(1,100).'.'.$request->avatar->extension();
+        //$iconName = $request->avatar->getClientOriginalName();;
         $request->avatar->move(public_path('Admin/assets/images/'.$folder), $iconName);
+        //$request->file('avatar')->storeAs('public/'.$folder,$iconName);
         return $iconName;
     }
 

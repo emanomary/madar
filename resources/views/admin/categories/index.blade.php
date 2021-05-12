@@ -28,7 +28,7 @@
                 <!-- Zero configuration table -->
                 <section id="configuration">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-header">
                                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
@@ -87,6 +87,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade text-left" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel10"
          aria-hidden="true">
         <div class="modal-dialog" role="document">

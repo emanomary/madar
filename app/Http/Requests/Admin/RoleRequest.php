@@ -25,7 +25,7 @@ class RoleRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:100|min:3|unique:roles,name,'.$this->id,
-            'slug' => 'required|string|max:100|min:3|unique:roles,slug,'.$this->id,
+            'slug' => 'string|max:100|min:3|unique:roles,slug,'.$this->id,
             'permissions' => 'required|array|min:1',
         ];
     }

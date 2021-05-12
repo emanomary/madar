@@ -1,6 +1,6 @@
 @font-face{
     font-family:"DUBAI-BOLD";
-    src:url("../fonts/DUBAI-BOLD.ttf");
+    src:url("../fonts/Dubai-Bold.ttf");
 }
 @font-face{
     font-family:"Dubai-Light";
@@ -8,11 +8,11 @@
 }
 @font-face{
     font-family:"DUBAI-MEDIUM";
-    src:url("../fonts/DUBAI-MEDIUM.ttf");
+    src:url("../fonts/Dubai-Medium.ttf");
 }
 @font-face{
     font-family:"DUBAI-REGULAR";
-    src:url("../fonts/DUBAI-REGULAR.ttf");
+    src:url("../fonts/Dubai-Regular.ttf");
 }
 img{
     width:100%;
